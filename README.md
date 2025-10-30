@@ -1,81 +1,60 @@
-# LiuLab 简化版网站
+# LiuLab 实验室网站（简化版）
 
-这是LiuLab网站的简化版本，只包含HTML文件和必要的图片资源。
+这是 LiuLab 网站的纯静态版本，包含 HTML/CSS/JS 以及必须的图片资源，便于本地浏览与 GitHub Pages 托管。
 
-## 文件结构
+## 目录结构
 
 ```
 LiuLab_Simplified/
 ├── css/
-│   └── Homepage.css          # 样式文件
+│   └── Homepage.css          # 全站样式
 ├── js/
-│   └── SliderShow.js         # 轮播图JavaScript
-├── images/                   # 图片文件夹（需要手动添加图片）
-├── LiuLab.html              # 首页
-├── About Liu.html           # 关于刘涛页面
-├── Research.html            # 研究页面
-├── Publications.html        # 发表论文页面
-├── News.html               # 新闻页面
-├── Members.html            # 成员页面
-├── Photos.html             # 照片页面
-└── README.md               # 说明文件
+│   └── SliderShow.js         # 首页轮播脚本
+├── images/                   # 静态图片（已就位）
+├── index.html                # 首页（由 LiuLab.html 拷贝而来）
+├── LiuLab.html               # 首页原文件（保留以兼容）
+├── About Liu.html            # 关于页面
+├── Research.html             # 研究方向
+├── Publications.html         # 论文发表
+├── News.html                 # 新闻动态
+├── Members.html              # 团队成员
+├── Photos.html               # 照片总览及子页入口
+└── README.md                 # 项目说明
 ```
 
-## 需要添加的图片
+## 本地预览
 
-由于图片文件较大，您需要手动将以下图片复制到 `images/` 文件夹中：
+1. 直接双击打开 `index.html`（或拖到浏览器）。
+2. 若浏览器有跨域限制，建议使用任意本地静态服务器启动（可选）：
+   - Python: `python -m http.server 8080`，然后访问 `http://localhost:8080`。
 
-### 首页轮播图
-- `2024_summer_cover.jpg`
-- `Principles of Genetic Code Expansion.jpg`
-- `Applications of Genetic Code Expansion.jpg`
-- `Antibody-related Applications of Genetic Code Expansion.jpg`
+## 部署与访问（GitHub Pages）
 
-### 发表论文图片
-- `2024_jacs.jpeg`
-- `2024_ncb.jpeg`
-- `2023 Chem.jpg`
-- `2023 N Com.png`
-- `WD 2022.jpg`
-- `2022 ACS CS.png`
-- `2021 NCB.png`
+该仓库已配置为直接从 `main` 分支根目录部署：
 
-### 成员照片
-- `LIU tao.jpg`
-- `wangyong.jpg`
-- `LI hui.jpg`
-- `ZHAO xin.jpg`
-- `SUN yi.jpg`
-- `ZENG zhiying.jpg`
-- `hxy.jpg`
-- `lms.jpg`
-- `ysz.jpg`
-- `CHANG liying.jpg`
-- `CAI wenkang.jpg`
-- `tlz.jpg`
-- `wangxin.jpg`
+1. 仓库 Settings → Pages → Source 选择 “Deploy from a branch”。
+2. 分支选择 `main`，文件夹选择 `/ (root)`，保存。
+3. 稍等数分钟后访问站点：
+   - `https://taoliugroup-pku.github.io/`
+   - 或 `https://yeyusu.github.io/taoliugroup-pku.github.io/`
 
-### 研究页面图片
-- `2018-10.1016-j.synbio.2018.09.003-Fig.1-1.jpg`
+若首页未生效，请确认根目录存在 `index.html`。
 
-### 照片页面图片
-- `2024_summer_squarecover.jpg`
-- `LiuGroup-SquareCover.png`
-- `2017-Spring-Travel-SquareCover.JPG`
-- `2018-First Anniversary-SqureCover.JPG`
-- `2018 spring travel cover.jpg`
-- `2019 spring travel cover.jpg`
-- `2021_huanqiu_cover.jpg`
-- `sidney-cover.jpg`
-- `liubayer.jpeg`
+## 资源说明
 
-## 使用方法
+- 所有页面内图片路径均指向 `images/` 相对目录；如需替换图片，保持同名覆盖即可。
+- 首页轮播与「论文/成员/相册」等栏目均已配好示例图片。
+- 大图加载较慢时，建议先压缩图片或使用 Web 格式（如 `.webp`）。
 
-1. 将所有图片文件复制到 `images/` 文件夹中
-2. 用浏览器打开 `LiuLab.html` 即可查看网站
+## 常见问题
 
-## 注意事项
+- 站点显示为 README 内容：请确认根目录存在 `index.html`（已添加）。
+- 推送后页面未更新：等待 2–5 分钟，或在仓库的 Actions/Pages 查看部署状态。
+- 图片不显示：检查图片是否已放入 `images/`，且文件名（含大小写与空格）与页面引用完全一致。
 
-- 所有HTML文件中的图片路径已经更新为 `images/` 相对路径
-- CSS和JavaScript文件路径也已更新
-- 这是一个静态网站，不需要服务器即可运行
+## 维护建议
+
+- 新增页面时，遵循现有文件命名与相对路径组织方式。
+- 大批量替换图片后，建议本地打开 `index.html` 逐页点击验证链接与图片。
+
+如需进一步功能（中英文切换、移动端自适应优化、自动化构建等），可在此基础上逐步扩展。
