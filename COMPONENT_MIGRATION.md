@@ -1,16 +1,20 @@
 # 组件系统迁移进度
 
-## 已完成 ✅
+## ✅ 全部完成！
+
+所有15个HTML文件已成功迁移到组件系统：
+
+### 主要页面 ✅
 - index.html
 - LiuLab.html
 - About Liu.html
 - Research.html
 - Publications.html
 - News.html
-
-## 待处理 ⏳
 - Members.html
 - Photos.html
+
+### Photos子页面 ✅
 - Photos-2017 Spring Travel.html
 - Photos-2018 Spring Travel.html
 - Photos-2019 Spring Travel.html
