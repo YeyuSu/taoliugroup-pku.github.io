@@ -12,24 +12,6 @@
 <body>
 <!-- Back to top -->
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-<script>
-    window.onscroll = function () {
-        scrollFunction()
-    };
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            document.getElementById("myBtn").style.display = "block";
-        } else {
-            document.getElementById("myBtn").style.display = "none";
-        }
-    }
-
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-</script>
 <!-- Back to top End -->
 <!-- Header -->
 <div class="compact" id="header">
@@ -108,5 +90,6 @@
     </div>
 </div>
 <!-- Footer End -->
+<script src="js/common.js"></script>
 </body>
 </html>
